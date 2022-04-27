@@ -22,12 +22,12 @@ def main():
 
         device.add_data_received_callback(data_receive_callback)
 
-        print("Sending broadcast data: %s..." % struct.pack("f", 10))
 
-        device.send_data_broadcast(struct.pack("f", 10))
+        while True:
 
-        print("Success")
-        input()
+            nums = input("Enter numbers: ").strip().split(' ')
+            data = bytearray([int(x) for x in nums])
+            device.send_data_broadcast(data)
 
     finally:
         if device is not None and device.is_open():

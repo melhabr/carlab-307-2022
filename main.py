@@ -1,6 +1,19 @@
 import math, struct, asyncio
 import numpy as np
 from bleak import BleakScanner, BleakClient
+from digi.xbee.devices import XBeeDevice
+
+PORT = "/dev/cu.usbserial-DN041RCA"
+BAUD_RATE = 115200
+
+device = XBeeDevice(PORT, BAUD_RATE)
+device.open()
+
+def data_receive_callback(xbee_message):
+            print("From %s >> %s" % (xbee_message.remote_device.get_64bit_addr(),
+                                     xbee_message.data.decode()))
+
+device.add_data_received_callback(data_receive_callback)
 
 def process_data(session_data):
 
@@ -25,9 +38,11 @@ def process_data(session_data):
     servo = max(servo, -1)
     motor = abs(diff)
     motor = 0 if motor < 50 else motor
+    motor = min(motor, 100)
 
     #print(session_data["lastBNOData"])
     print(f"Servo: {servo}\tMotor: {motor}")
+    send_data(motor, servo)
 
 def notify_callback(handle, data, session_data):
 
@@ -46,6 +61,12 @@ def notify_callback(handle, data, session_data):
 
     process_data(session_data)
 
+def send_data(motor, servo): 
+
+    new_motor = int(motor * 2.55)
+    new_servo = int((-servo + 1) * 127)
+    data = bytearray([new_motor, new_servo])
+    device.send_data_broadcast(data)
 
 async def main():
     devices = await BleakScanner.discover()

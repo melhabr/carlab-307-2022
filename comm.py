@@ -22,7 +22,6 @@ def main():
 
         device.add_data_received_callback(data_receive_callback)
 
-
         while True:
 
             nums = input("Enter numbers: ").strip().split(' ')

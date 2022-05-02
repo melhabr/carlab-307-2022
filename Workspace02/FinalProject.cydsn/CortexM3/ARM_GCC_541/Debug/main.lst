@@ -1,0 +1,1107 @@
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.glove_data,"ax",%progbits
+  20              		.align	2
+  21              		.global	glove_data
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	glove_data, %function
+  25              	glove_data:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** /* ========================================
+   2:main.c        ****  *
+   3:main.c        ****  * Copyright YOUR COMPANY, THE YEAR
+   4:main.c        ****  * All Rights Reserved
+   5:main.c        ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:main.c        ****  *
+   7:main.c        ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:main.c        ****  * WHICH IS THE PROPERTY OF your company.
+   9:main.c        ****  *
+  10:main.c        ****  * ========================================
+  11:main.c        **** */
+  12:main.c        **** #include "project.h"
+  13:main.c        **** #include <string.h>
+  14:main.c        **** #include <stdio.h>
+  15:main.c        **** 
+  16:main.c        **** char buf[50];
+  17:main.c        **** int i = 0;
+  18:main.c        **** 
+  19:main.c        **** CY_ISR(glove_data) {
+  28              		.loc 1 19 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 38B5     		push	{r3, r4, r5, lr}
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 3, -16
+  35              		.cfi_offset 4, -12
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  20:main.c        ****     
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 2
+
+
+  21:main.c        ****     while (UART_1_GetRxBufferSize()) {
+  38              		.loc 1 21 0
+  39 0002 08E0     		b	.L2
+  40              	.L3:
+  22:main.c        ****         buf[i] = UART_1_ReadRxData();
+  41              		.loc 1 22 0
+  42 0004 064C     		ldr	r4, .L5
+  43 0006 2568     		ldr	r5, [r4]
+  44 0008 FFF7FEFF 		bl	UART_1_ReadRxData
+  45              	.LVL0:
+  46 000c 054B     		ldr	r3, .L5+4
+  47 000e 5855     		strb	r0, [r3, r5]
+  23:main.c        ****         i++;
+  48              		.loc 1 23 0
+  49 0010 2368     		ldr	r3, [r4]
+  50 0012 0133     		adds	r3, r3, #1
+  51 0014 2360     		str	r3, [r4]
+  52              	.L2:
+  21:main.c        ****         buf[i] = UART_1_ReadRxData();
+  53              		.loc 1 21 0
+  54 0016 FFF7FEFF 		bl	UART_1_GetRxBufferSize
+  55              	.LVL1:
+  56 001a 0028     		cmp	r0, #0
+  57 001c F2D1     		bne	.L3
+  24:main.c        ****     }
+  25:main.c        ****     
+  26:main.c        **** }
+  58              		.loc 1 26 0
+  59 001e 38BD     		pop	{r3, r4, r5, pc}
+  60              	.L6:
+  61              		.align	2
+  62              	.L5:
+  63 0020 00000000 		.word	.LANCHOR0
+  64 0024 00000000 		.word	buf
+  65              		.cfi_endproc
+  66              	.LFE64:
+  67              		.size	glove_data, .-glove_data
+  68              		.global	__aeabi_i2d
+  69              		.global	__aeabi_ddiv
+  70              		.global	__aeabi_dmul
+  71              		.global	__aeabi_d2f
+  72              		.global	__aeabi_f2uiz
+  73              		.global	__aeabi_fmul
+  74              		.global	__aeabi_fadd
+  75              		.section	.text.main,"ax",%progbits
+  76              		.align	2
+  77              		.global	main
+  78              		.thumb
+  79              		.thumb_func
+  80              		.type	main, %function
+  81              	main:
+  82              	.LFB65:
+  27:main.c        **** int main(void)
+  28:main.c        **** {
+  83              		.loc 1 28 0
+  84              		.cfi_startproc
+  85              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 3
+
+
+  86              		@ frame_needed = 0, uses_anonymous_args = 0
+  87 0000 10B5     		push	{r4, lr}
+  88              		.cfi_def_cfa_offset 8
+  89              		.cfi_offset 4, -8
+  90              		.cfi_offset 14, -4
+  29:main.c        ****     CyGlobalIntEnable; /* Enable global interrupts. */
+  91              		.loc 1 29 0
+  92              		.syntax unified
+  93              	@ 29 "main.c" 1
+  94 0002 62B6     		CPSIE   i
+  95              	@ 0 "" 2
+  30:main.c        ****     
+  31:main.c        ****     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
+  32:main.c        ****     // Glove control init
+  33:main.c        ****     UART_1_Start();
+  96              		.loc 1 33 0
+  97              		.thumb
+  98              		.syntax unified
+  99 0004 FFF7FEFF 		bl	UART_1_Start
+ 100              	.LVL2:
+  34:main.c        ****     PWM_Start();
+ 101              		.loc 1 34 0
+ 102 0008 FFF7FEFF 		bl	PWM_Start
+ 103              	.LVL3:
+  35:main.c        ****     PWM_Timer_Start();
+ 104              		.loc 1 35 0
+ 105 000c FFF7FEFF 		bl	PWM_Timer_Start
+ 106              	.LVL4:
+  36:main.c        ****     Servo_PWM_Start();
+ 107              		.loc 1 36 0
+ 108 0010 FFF7FEFF 		bl	Servo_PWM_Start
+ 109              	.LVL5:
+  37:main.c        ****     
+  38:main.c        ****     // UART_1_PutString("Hello world!\n\r");
+  39:main.c        ****     Receive_Data_Start();
+ 110              		.loc 1 39 0
+ 111 0014 FFF7FEFF 		bl	Receive_Data_Start
+ 112              	.LVL6:
+  40:main.c        ****     Receive_Data_SetVector(glove_data);
+ 113              		.loc 1 40 0
+ 114 0018 1D48     		ldr	r0, .L11+8
+ 115 001a FFF7FEFF 		bl	Receive_Data_SetVector
+ 116              	.LVL7:
+ 117              	.L8:
+  41:main.c        ****     uint8 speedVal = 0;
+  42:main.c        ****     uint8 directionVal = 127;
+  43:main.c        ****     uint8 newSpeed;
+  44:main.c        ****     float normalized;
+  45:main.c        ****     uint16 position;
+  46:main.c        ****     
+  47:main.c        ****     for(;;)
+  48:main.c        ****     {
+  49:main.c        ****   
+  50:main.c        ****         if (i > 1) {
+ 118              		.loc 1 50 0
+ 119 001e 1D4B     		ldr	r3, .L11+12
+ 120 0020 1B68     		ldr	r3, [r3]
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 4
+
+
+ 121 0022 012B     		cmp	r3, #1
+ 122 0024 FBDD     		ble	.L8
+  51:main.c        ****             
+  52:main.c        ****             
+  53:main.c        ****             speedVal = (uint8) buf[0];
+ 123              		.loc 1 53 0
+ 124 0026 1C4B     		ldr	r3, .L11+16
+ 125              	.LVL8:
+  54:main.c        ****             directionVal = (uint8) buf[1];
+ 126              		.loc 1 54 0
+ 127 0028 5C78     		ldrb	r4, [r3, #1]	@ zero_extendqisi2
+ 128              	.LVL9:
+  55:main.c        ****             
+  56:main.c        ****             // change speed and direction
+  57:main.c        ****             normalized = (speedVal / 255.0) * 100;
+ 129              		.loc 1 57 0
+ 130 002a 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 131 002c FFF7FEFF 		bl	__aeabi_i2d
+ 132              	.LVL10:
+ 133 0030 15A3     		adr	r3, .L11
+ 134 0032 D3E90023 		ldrd	r2, [r3]
+ 135 0036 FFF7FEFF 		bl	__aeabi_ddiv
+ 136              	.LVL11:
+ 137 003a 0022     		movs	r2, #0
+ 138 003c 174B     		ldr	r3, .L11+20
+ 139 003e FFF7FEFF 		bl	__aeabi_dmul
+ 140              	.LVL12:
+ 141 0042 FFF7FEFF 		bl	__aeabi_d2f
+ 142              	.LVL13:
+  58:main.c        ****             newSpeed = (uint8) normalized;
+ 143              		.loc 1 58 0
+ 144 0046 FFF7FEFF 		bl	__aeabi_f2uiz
+ 145              	.LVL14:
+  59:main.c        ****             PWM_WriteCompare(newSpeed);
+ 146              		.loc 1 59 0
+ 147 004a C0B2     		uxtb	r0, r0
+ 148 004c FFF7FEFF 		bl	PWM_WriteCompare
+ 149              	.LVL15:
+  60:main.c        **** 
+  61:main.c        ****             normalized = (directionVal - 127) / 128.0;
+ 150              		.loc 1 61 0
+ 151 0050 A4F17F00 		sub	r0, r4, #127
+ 152 0054 FFF7FEFF 		bl	__aeabi_i2d
+ 153              	.LVL16:
+ 154 0058 0022     		movs	r2, #0
+ 155 005a 4FF07E53 		mov	r3, #1065353216
+ 156 005e FFF7FEFF 		bl	__aeabi_dmul
+ 157              	.LVL17:
+ 158 0062 FFF7FEFF 		bl	__aeabi_d2f
+ 159              	.LVL18:
+  62:main.c        ****             position = normalized * 6000 + 9600;
+ 160              		.loc 1 62 0
+ 161 0066 0E49     		ldr	r1, .L11+24
+ 162 0068 FFF7FEFF 		bl	__aeabi_fmul
+ 163              	.LVL19:
+ 164 006c 0D49     		ldr	r1, .L11+28
+ 165 006e FFF7FEFF 		bl	__aeabi_fadd
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 5
+
+
+ 166              	.LVL20:
+ 167 0072 FFF7FEFF 		bl	__aeabi_f2uiz
+ 168              	.LVL21:
+  63:main.c        ****             Servo_PWM_WriteCompare(position); 
+ 169              		.loc 1 63 0
+ 170 0076 80B2     		uxth	r0, r0
+ 171 0078 FFF7FEFF 		bl	Servo_PWM_WriteCompare
+ 172              	.LVL22:
+  64:main.c        ****             
+  65:main.c        ****             // reset
+  66:main.c        ****             i = 0;
+ 173              		.loc 1 66 0
+ 174 007c 0022     		movs	r2, #0
+ 175 007e 054B     		ldr	r3, .L11+12
+ 176 0080 1A60     		str	r2, [r3]
+ 177 0082 CCE7     		b	.L8
+ 178              	.L12:
+ 179 0084 AFF30080 		.align	3
+ 180              	.L11:
+ 181 0088 00000000 		.word	0
+ 182 008c 00E06F40 		.word	1081073664
+ 183 0090 00000000 		.word	glove_data
+ 184 0094 00000000 		.word	.LANCHOR0
+ 185 0098 00000000 		.word	buf
+ 186 009c 00005940 		.word	1079574528
+ 187 00a0 0080BB45 		.word	1169915904
+ 188 00a4 00001646 		.word	1175846912
+ 189              		.cfi_endproc
+ 190              	.LFE65:
+ 191              		.size	main, .-main
+ 192              		.global	i
+ 193              		.comm	buf,50,4
+ 194              		.bss
+ 195              		.align	2
+ 196              		.set	.LANCHOR0,. + 0
+ 197              		.type	i, %object
+ 198              		.size	i, 4
+ 199              	i:
+ 200 0000 00000000 		.space	4
+ 201              		.text
+ 202              	.Letext0:
+ 203              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 204              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 205              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 206              		.file 5 "Generated_Source\\PSoC5/UART_1.h"
+ 207              		.file 6 "Generated_Source\\PSoC5/PWM.h"
+ 208              		.file 7 "Generated_Source\\PSoC5/PWM_Timer.h"
+ 209              		.file 8 "Generated_Source\\PSoC5/Servo_PWM.h"
+ 210              		.file 9 "Generated_Source\\PSoC5/Receive_Data.h"
+ 211              		.file 10 "Generated_Source\\PSoC5/core_cm3.h"
+ 212              		.section	.debug_info,"",%progbits
+ 213              	.Ldebug_info0:
+ 214 0000 4B020000 		.4byte	0x24b
+ 215 0004 0400     		.2byte	0x4
+ 216 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 217 000a 04       		.byte	0x4
+ 218 000b 01       		.uleb128 0x1
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 6
+
+
+ 219 000c D8000000 		.4byte	.LASF34
+ 220 0010 0C       		.byte	0xc
+ 221 0011 40020000 		.4byte	.LASF35
+ 222 0015 34000000 		.4byte	.LASF36
+ 223 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 224 001d 00000000 		.4byte	0
+ 225 0021 00000000 		.4byte	.Ldebug_line0
+ 226 0025 02       		.uleb128 0x2
+ 227 0026 01       		.byte	0x1
+ 228 0027 06       		.byte	0x6
+ 229 0028 80020000 		.4byte	.LASF0
+ 230 002c 02       		.uleb128 0x2
+ 231 002d 01       		.byte	0x1
+ 232 002e 08       		.byte	0x8
+ 233 002f CA000000 		.4byte	.LASF1
+ 234 0033 02       		.uleb128 0x2
+ 235 0034 02       		.byte	0x2
+ 236 0035 05       		.byte	0x5
+ 237 0036 4C020000 		.4byte	.LASF2
+ 238 003a 02       		.uleb128 0x2
+ 239 003b 02       		.byte	0x2
+ 240 003c 07       		.byte	0x7
+ 241 003d 85010000 		.4byte	.LASF3
+ 242 0041 03       		.uleb128 0x3
+ 243 0042 0D000000 		.4byte	.LASF9
+ 244 0046 02       		.byte	0x2
+ 245 0047 3F       		.byte	0x3f
+ 246 0048 4C000000 		.4byte	0x4c
+ 247 004c 02       		.uleb128 0x2
+ 248 004d 04       		.byte	0x4
+ 249 004e 05       		.byte	0x5
+ 250 004f 6B020000 		.4byte	.LASF4
+ 251 0053 02       		.uleb128 0x2
+ 252 0054 04       		.byte	0x4
+ 253 0055 07       		.byte	0x7
+ 254 0056 AE010000 		.4byte	.LASF5
+ 255 005a 02       		.uleb128 0x2
+ 256 005b 08       		.byte	0x8
+ 257 005c 05       		.byte	0x5
+ 258 005d 32020000 		.4byte	.LASF6
+ 259 0061 02       		.uleb128 0x2
+ 260 0062 08       		.byte	0x8
+ 261 0063 07       		.byte	0x7
+ 262 0064 F3010000 		.4byte	.LASF7
+ 263 0068 04       		.uleb128 0x4
+ 264 0069 04       		.byte	0x4
+ 265 006a 05       		.byte	0x5
+ 266 006b 696E7400 		.ascii	"int\000"
+ 267 006f 02       		.uleb128 0x2
+ 268 0070 04       		.byte	0x4
+ 269 0071 07       		.byte	0x7
+ 270 0072 E6010000 		.4byte	.LASF8
+ 271 0076 03       		.uleb128 0x3
+ 272 0077 21020000 		.4byte	.LASF10
+ 273 007b 03       		.byte	0x3
+ 274 007c 2C       		.byte	0x2c
+ 275 007d 41000000 		.4byte	0x41
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 7
+
+
+ 276 0081 05       		.uleb128 0x5
+ 277 0082 1E000000 		.4byte	.LASF11
+ 278 0086 04       		.byte	0x4
+ 279 0087 E401     		.2byte	0x1e4
+ 280 0089 2C000000 		.4byte	0x2c
+ 281 008d 05       		.uleb128 0x5
+ 282 008e D6010000 		.4byte	.LASF12
+ 283 0092 04       		.byte	0x4
+ 284 0093 E501     		.2byte	0x1e5
+ 285 0095 3A000000 		.4byte	0x3a
+ 286 0099 02       		.uleb128 0x2
+ 287 009a 04       		.byte	0x4
+ 288 009b 04       		.byte	0x4
+ 289 009c 91000000 		.4byte	.LASF13
+ 290 00a0 02       		.uleb128 0x2
+ 291 00a1 08       		.byte	0x8
+ 292 00a2 04       		.byte	0x4
+ 293 00a3 17000000 		.4byte	.LASF14
+ 294 00a7 02       		.uleb128 0x2
+ 295 00a8 01       		.byte	0x1
+ 296 00a9 08       		.byte	0x8
+ 297 00aa 47020000 		.4byte	.LASF15
+ 298 00ae 02       		.uleb128 0x2
+ 299 00af 08       		.byte	0x8
+ 300 00b0 04       		.byte	0x4
+ 301 00b1 74020000 		.4byte	.LASF16
+ 302 00b5 02       		.uleb128 0x2
+ 303 00b6 04       		.byte	0x4
+ 304 00b7 07       		.byte	0x7
+ 305 00b8 29020000 		.4byte	.LASF17
+ 306 00bc 06       		.uleb128 0x6
+ 307 00bd 6F000000 		.4byte	.LASF37
+ 308 00c1 01       		.byte	0x1
+ 309 00c2 13       		.byte	0x13
+ 310 00c3 00000000 		.4byte	.LFB64
+ 311 00c7 28000000 		.4byte	.LFE64-.LFB64
+ 312 00cb 01       		.uleb128 0x1
+ 313 00cc 9C       		.byte	0x9c
+ 314 00cd E4000000 		.4byte	0xe4
+ 315 00d1 07       		.uleb128 0x7
+ 316 00d2 0C000000 		.4byte	.LVL0
+ 317 00d6 E0010000 		.4byte	0x1e0
+ 318 00da 07       		.uleb128 0x7
+ 319 00db 1A000000 		.4byte	.LVL1
+ 320 00df EB010000 		.4byte	0x1eb
+ 321 00e3 00       		.byte	0
+ 322 00e4 08       		.uleb128 0x8
+ 323 00e5 D1010000 		.4byte	.LASF38
+ 324 00e9 01       		.byte	0x1
+ 325 00ea 1B       		.byte	0x1b
+ 326 00eb 68000000 		.4byte	0x68
+ 327 00ef 00000000 		.4byte	.LFB65
+ 328 00f3 A8000000 		.4byte	.LFE65-.LFB65
+ 329 00f7 01       		.uleb128 0x1
+ 330 00f8 9C       		.byte	0x9c
+ 331 00f9 9F010000 		.4byte	0x19f
+ 332 00fd 09       		.uleb128 0x9
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 8
+
+
+ 333 00fe 97000000 		.4byte	.LASF18
+ 334 0102 01       		.byte	0x1
+ 335 0103 29       		.byte	0x29
+ 336 0104 81000000 		.4byte	0x81
+ 337 0108 00000000 		.4byte	.LLST0
+ 338 010c 09       		.uleb128 0x9
+ 339 010d 66010000 		.4byte	.LASF19
+ 340 0111 01       		.byte	0x1
+ 341 0112 2A       		.byte	0x2a
+ 342 0113 81000000 		.4byte	0x81
+ 343 0117 17000000 		.4byte	.LLST1
+ 344 011b 09       		.uleb128 0x9
+ 345 011c 98010000 		.4byte	.LASF20
+ 346 0120 01       		.byte	0x1
+ 347 0121 2B       		.byte	0x2b
+ 348 0122 81000000 		.4byte	0x81
+ 349 0126 2A000000 		.4byte	.LLST2
+ 350 012a 09       		.uleb128 0x9
+ 351 012b 60020000 		.4byte	.LASF21
+ 352 012f 01       		.byte	0x1
+ 353 0130 2C       		.byte	0x2c
+ 354 0131 99000000 		.4byte	0x99
+ 355 0135 3D000000 		.4byte	.LLST3
+ 356 0139 09       		.uleb128 0x9
+ 357 013a DD010000 		.4byte	.LASF22
+ 358 013e 01       		.byte	0x1
+ 359 013f 2D       		.byte	0x2d
+ 360 0140 8D000000 		.4byte	0x8d
+ 361 0144 5B000000 		.4byte	.LLST4
+ 362 0148 07       		.uleb128 0x7
+ 363 0149 08000000 		.4byte	.LVL2
+ 364 014d F6010000 		.4byte	0x1f6
+ 365 0151 07       		.uleb128 0x7
+ 366 0152 0C000000 		.4byte	.LVL3
+ 367 0156 01020000 		.4byte	0x201
+ 368 015a 07       		.uleb128 0x7
+ 369 015b 10000000 		.4byte	.LVL4
+ 370 015f 0C020000 		.4byte	0x20c
+ 371 0163 07       		.uleb128 0x7
+ 372 0164 14000000 		.4byte	.LVL5
+ 373 0168 17020000 		.4byte	0x217
+ 374 016c 07       		.uleb128 0x7
+ 375 016d 18000000 		.4byte	.LVL6
+ 376 0171 22020000 		.4byte	0x222
+ 377 0175 0A       		.uleb128 0xa
+ 378 0176 1E000000 		.4byte	.LVL7
+ 379 017a 2D020000 		.4byte	0x22d
+ 380 017e 8C010000 		.4byte	0x18c
+ 381 0182 0B       		.uleb128 0xb
+ 382 0183 01       		.uleb128 0x1
+ 383 0184 50       		.byte	0x50
+ 384 0185 05       		.uleb128 0x5
+ 385 0186 03       		.byte	0x3
+ 386 0187 00000000 		.4byte	glove_data
+ 387 018b 00       		.byte	0
+ 388 018c 07       		.uleb128 0x7
+ 389 018d 50000000 		.4byte	.LVL15
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 9
+
+
+ 390 0191 38020000 		.4byte	0x238
+ 391 0195 07       		.uleb128 0x7
+ 392 0196 7C000000 		.4byte	.LVL22
+ 393 019a 43020000 		.4byte	0x243
+ 394 019e 00       		.byte	0
+ 395 019f 0C       		.uleb128 0xc
+ 396 01a0 A1010000 		.4byte	.LASF23
+ 397 01a4 0A       		.byte	0xa
+ 398 01a5 1207     		.2byte	0x712
+ 399 01a7 AB010000 		.4byte	0x1ab
+ 400 01ab 0D       		.uleb128 0xd
+ 401 01ac 76000000 		.4byte	0x76
+ 402 01b0 0E       		.uleb128 0xe
+ 403 01b1 A7000000 		.4byte	0xa7
+ 404 01b5 C0010000 		.4byte	0x1c0
+ 405 01b9 0F       		.uleb128 0xf
+ 406 01ba B5000000 		.4byte	0xb5
+ 407 01be 31       		.byte	0x31
+ 408 01bf 00       		.byte	0
+ 409 01c0 10       		.uleb128 0x10
+ 410 01c1 62756600 		.ascii	"buf\000"
+ 411 01c5 01       		.byte	0x1
+ 412 01c6 10       		.byte	0x10
+ 413 01c7 B0010000 		.4byte	0x1b0
+ 414 01cb 05       		.uleb128 0x5
+ 415 01cc 03       		.byte	0x3
+ 416 01cd 00000000 		.4byte	buf
+ 417 01d1 10       		.uleb128 0x10
+ 418 01d2 6900     		.ascii	"i\000"
+ 419 01d4 01       		.byte	0x1
+ 420 01d5 11       		.byte	0x11
+ 421 01d6 68000000 		.4byte	0x68
+ 422 01da 05       		.uleb128 0x5
+ 423 01db 03       		.byte	0x3
+ 424 01dc 00000000 		.4byte	i
+ 425 01e0 11       		.uleb128 0x11
+ 426 01e1 73010000 		.4byte	.LASF24
+ 427 01e5 73010000 		.4byte	.LASF24
+ 428 01e9 05       		.byte	0x5
+ 429 01ea 6F       		.byte	0x6f
+ 430 01eb 11       		.uleb128 0x11
+ 431 01ec B3000000 		.4byte	.LASF25
+ 432 01f0 B3000000 		.4byte	.LASF25
+ 433 01f4 05       		.byte	0x5
+ 434 01f5 73       		.byte	0x73
+ 435 01f6 11       		.uleb128 0x11
+ 436 01f7 00000000 		.4byte	.LASF26
+ 437 01fb 00000000 		.4byte	.LASF26
+ 438 01ff 05       		.byte	0x5
+ 439 0200 54       		.byte	0x54
+ 440 0201 11       		.uleb128 0x11
+ 441 0202 56020000 		.4byte	.LASF27
+ 442 0206 56020000 		.4byte	.LASF27
+ 443 020a 06       		.byte	0x6
+ 444 020b 92       		.byte	0x92
+ 445 020c 11       		.uleb128 0x11
+ 446 020d 8C020000 		.4byte	.LASF28
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 10
+
+
+ 447 0211 8C020000 		.4byte	.LASF28
+ 448 0215 07       		.byte	0x7
+ 449 0216 5A       		.byte	0x5a
+ 450 0217 11       		.uleb128 0x11
+ 451 0218 24000000 		.4byte	.LASF29
+ 452 021c 24000000 		.4byte	.LASF29
+ 453 0220 08       		.byte	0x8
+ 454 0221 92       		.byte	0x92
+ 455 0222 11       		.uleb128 0x11
+ 456 0223 A0000000 		.4byte	.LASF30
+ 457 0227 A0000000 		.4byte	.LASF30
+ 458 022b 09       		.byte	0x9
+ 459 022c 17       		.byte	0x17
+ 460 022d 11       		.uleb128 0x11
+ 461 022e 0A020000 		.4byte	.LASF31
+ 462 0232 0A020000 		.4byte	.LASF31
+ 463 0236 09       		.byte	0x9
+ 464 0237 1D       		.byte	0x1d
+ 465 0238 11       		.uleb128 0x11
+ 466 0239 C0010000 		.4byte	.LASF32
+ 467 023d C0010000 		.4byte	.LASF32
+ 468 0241 06       		.byte	0x6
+ 469 0242 C3       		.byte	0xc3
+ 470 0243 11       		.uleb128 0x11
+ 471 0244 7A000000 		.4byte	.LASF33
+ 472 0248 7A000000 		.4byte	.LASF33
+ 473 024c 08       		.byte	0x8
+ 474 024d C3       		.byte	0xc3
+ 475 024e 00       		.byte	0
+ 476              		.section	.debug_abbrev,"",%progbits
+ 477              	.Ldebug_abbrev0:
+ 478 0000 01       		.uleb128 0x1
+ 479 0001 11       		.uleb128 0x11
+ 480 0002 01       		.byte	0x1
+ 481 0003 25       		.uleb128 0x25
+ 482 0004 0E       		.uleb128 0xe
+ 483 0005 13       		.uleb128 0x13
+ 484 0006 0B       		.uleb128 0xb
+ 485 0007 03       		.uleb128 0x3
+ 486 0008 0E       		.uleb128 0xe
+ 487 0009 1B       		.uleb128 0x1b
+ 488 000a 0E       		.uleb128 0xe
+ 489 000b 55       		.uleb128 0x55
+ 490 000c 17       		.uleb128 0x17
+ 491 000d 11       		.uleb128 0x11
+ 492 000e 01       		.uleb128 0x1
+ 493 000f 10       		.uleb128 0x10
+ 494 0010 17       		.uleb128 0x17
+ 495 0011 00       		.byte	0
+ 496 0012 00       		.byte	0
+ 497 0013 02       		.uleb128 0x2
+ 498 0014 24       		.uleb128 0x24
+ 499 0015 00       		.byte	0
+ 500 0016 0B       		.uleb128 0xb
+ 501 0017 0B       		.uleb128 0xb
+ 502 0018 3E       		.uleb128 0x3e
+ 503 0019 0B       		.uleb128 0xb
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 11
+
+
+ 504 001a 03       		.uleb128 0x3
+ 505 001b 0E       		.uleb128 0xe
+ 506 001c 00       		.byte	0
+ 507 001d 00       		.byte	0
+ 508 001e 03       		.uleb128 0x3
+ 509 001f 16       		.uleb128 0x16
+ 510 0020 00       		.byte	0
+ 511 0021 03       		.uleb128 0x3
+ 512 0022 0E       		.uleb128 0xe
+ 513 0023 3A       		.uleb128 0x3a
+ 514 0024 0B       		.uleb128 0xb
+ 515 0025 3B       		.uleb128 0x3b
+ 516 0026 0B       		.uleb128 0xb
+ 517 0027 49       		.uleb128 0x49
+ 518 0028 13       		.uleb128 0x13
+ 519 0029 00       		.byte	0
+ 520 002a 00       		.byte	0
+ 521 002b 04       		.uleb128 0x4
+ 522 002c 24       		.uleb128 0x24
+ 523 002d 00       		.byte	0
+ 524 002e 0B       		.uleb128 0xb
+ 525 002f 0B       		.uleb128 0xb
+ 526 0030 3E       		.uleb128 0x3e
+ 527 0031 0B       		.uleb128 0xb
+ 528 0032 03       		.uleb128 0x3
+ 529 0033 08       		.uleb128 0x8
+ 530 0034 00       		.byte	0
+ 531 0035 00       		.byte	0
+ 532 0036 05       		.uleb128 0x5
+ 533 0037 16       		.uleb128 0x16
+ 534 0038 00       		.byte	0
+ 535 0039 03       		.uleb128 0x3
+ 536 003a 0E       		.uleb128 0xe
+ 537 003b 3A       		.uleb128 0x3a
+ 538 003c 0B       		.uleb128 0xb
+ 539 003d 3B       		.uleb128 0x3b
+ 540 003e 05       		.uleb128 0x5
+ 541 003f 49       		.uleb128 0x49
+ 542 0040 13       		.uleb128 0x13
+ 543 0041 00       		.byte	0
+ 544 0042 00       		.byte	0
+ 545 0043 06       		.uleb128 0x6
+ 546 0044 2E       		.uleb128 0x2e
+ 547 0045 01       		.byte	0x1
+ 548 0046 3F       		.uleb128 0x3f
+ 549 0047 19       		.uleb128 0x19
+ 550 0048 03       		.uleb128 0x3
+ 551 0049 0E       		.uleb128 0xe
+ 552 004a 3A       		.uleb128 0x3a
+ 553 004b 0B       		.uleb128 0xb
+ 554 004c 3B       		.uleb128 0x3b
+ 555 004d 0B       		.uleb128 0xb
+ 556 004e 27       		.uleb128 0x27
+ 557 004f 19       		.uleb128 0x19
+ 558 0050 11       		.uleb128 0x11
+ 559 0051 01       		.uleb128 0x1
+ 560 0052 12       		.uleb128 0x12
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 12
+
+
+ 561 0053 06       		.uleb128 0x6
+ 562 0054 40       		.uleb128 0x40
+ 563 0055 18       		.uleb128 0x18
+ 564 0056 9742     		.uleb128 0x2117
+ 565 0058 19       		.uleb128 0x19
+ 566 0059 01       		.uleb128 0x1
+ 567 005a 13       		.uleb128 0x13
+ 568 005b 00       		.byte	0
+ 569 005c 00       		.byte	0
+ 570 005d 07       		.uleb128 0x7
+ 571 005e 898201   		.uleb128 0x4109
+ 572 0061 00       		.byte	0
+ 573 0062 11       		.uleb128 0x11
+ 574 0063 01       		.uleb128 0x1
+ 575 0064 31       		.uleb128 0x31
+ 576 0065 13       		.uleb128 0x13
+ 577 0066 00       		.byte	0
+ 578 0067 00       		.byte	0
+ 579 0068 08       		.uleb128 0x8
+ 580 0069 2E       		.uleb128 0x2e
+ 581 006a 01       		.byte	0x1
+ 582 006b 3F       		.uleb128 0x3f
+ 583 006c 19       		.uleb128 0x19
+ 584 006d 03       		.uleb128 0x3
+ 585 006e 0E       		.uleb128 0xe
+ 586 006f 3A       		.uleb128 0x3a
+ 587 0070 0B       		.uleb128 0xb
+ 588 0071 3B       		.uleb128 0x3b
+ 589 0072 0B       		.uleb128 0xb
+ 590 0073 27       		.uleb128 0x27
+ 591 0074 19       		.uleb128 0x19
+ 592 0075 49       		.uleb128 0x49
+ 593 0076 13       		.uleb128 0x13
+ 594 0077 8701     		.uleb128 0x87
+ 595 0079 19       		.uleb128 0x19
+ 596 007a 11       		.uleb128 0x11
+ 597 007b 01       		.uleb128 0x1
+ 598 007c 12       		.uleb128 0x12
+ 599 007d 06       		.uleb128 0x6
+ 600 007e 40       		.uleb128 0x40
+ 601 007f 18       		.uleb128 0x18
+ 602 0080 9642     		.uleb128 0x2116
+ 603 0082 19       		.uleb128 0x19
+ 604 0083 01       		.uleb128 0x1
+ 605 0084 13       		.uleb128 0x13
+ 606 0085 00       		.byte	0
+ 607 0086 00       		.byte	0
+ 608 0087 09       		.uleb128 0x9
+ 609 0088 34       		.uleb128 0x34
+ 610 0089 00       		.byte	0
+ 611 008a 03       		.uleb128 0x3
+ 612 008b 0E       		.uleb128 0xe
+ 613 008c 3A       		.uleb128 0x3a
+ 614 008d 0B       		.uleb128 0xb
+ 615 008e 3B       		.uleb128 0x3b
+ 616 008f 0B       		.uleb128 0xb
+ 617 0090 49       		.uleb128 0x49
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 13
+
+
+ 618 0091 13       		.uleb128 0x13
+ 619 0092 02       		.uleb128 0x2
+ 620 0093 17       		.uleb128 0x17
+ 621 0094 00       		.byte	0
+ 622 0095 00       		.byte	0
+ 623 0096 0A       		.uleb128 0xa
+ 624 0097 898201   		.uleb128 0x4109
+ 625 009a 01       		.byte	0x1
+ 626 009b 11       		.uleb128 0x11
+ 627 009c 01       		.uleb128 0x1
+ 628 009d 31       		.uleb128 0x31
+ 629 009e 13       		.uleb128 0x13
+ 630 009f 01       		.uleb128 0x1
+ 631 00a0 13       		.uleb128 0x13
+ 632 00a1 00       		.byte	0
+ 633 00a2 00       		.byte	0
+ 634 00a3 0B       		.uleb128 0xb
+ 635 00a4 8A8201   		.uleb128 0x410a
+ 636 00a7 00       		.byte	0
+ 637 00a8 02       		.uleb128 0x2
+ 638 00a9 18       		.uleb128 0x18
+ 639 00aa 9142     		.uleb128 0x2111
+ 640 00ac 18       		.uleb128 0x18
+ 641 00ad 00       		.byte	0
+ 642 00ae 00       		.byte	0
+ 643 00af 0C       		.uleb128 0xc
+ 644 00b0 34       		.uleb128 0x34
+ 645 00b1 00       		.byte	0
+ 646 00b2 03       		.uleb128 0x3
+ 647 00b3 0E       		.uleb128 0xe
+ 648 00b4 3A       		.uleb128 0x3a
+ 649 00b5 0B       		.uleb128 0xb
+ 650 00b6 3B       		.uleb128 0x3b
+ 651 00b7 05       		.uleb128 0x5
+ 652 00b8 49       		.uleb128 0x49
+ 653 00b9 13       		.uleb128 0x13
+ 654 00ba 3F       		.uleb128 0x3f
+ 655 00bb 19       		.uleb128 0x19
+ 656 00bc 3C       		.uleb128 0x3c
+ 657 00bd 19       		.uleb128 0x19
+ 658 00be 00       		.byte	0
+ 659 00bf 00       		.byte	0
+ 660 00c0 0D       		.uleb128 0xd
+ 661 00c1 35       		.uleb128 0x35
+ 662 00c2 00       		.byte	0
+ 663 00c3 49       		.uleb128 0x49
+ 664 00c4 13       		.uleb128 0x13
+ 665 00c5 00       		.byte	0
+ 666 00c6 00       		.byte	0
+ 667 00c7 0E       		.uleb128 0xe
+ 668 00c8 01       		.uleb128 0x1
+ 669 00c9 01       		.byte	0x1
+ 670 00ca 49       		.uleb128 0x49
+ 671 00cb 13       		.uleb128 0x13
+ 672 00cc 01       		.uleb128 0x1
+ 673 00cd 13       		.uleb128 0x13
+ 674 00ce 00       		.byte	0
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 14
+
+
+ 675 00cf 00       		.byte	0
+ 676 00d0 0F       		.uleb128 0xf
+ 677 00d1 21       		.uleb128 0x21
+ 678 00d2 00       		.byte	0
+ 679 00d3 49       		.uleb128 0x49
+ 680 00d4 13       		.uleb128 0x13
+ 681 00d5 2F       		.uleb128 0x2f
+ 682 00d6 0B       		.uleb128 0xb
+ 683 00d7 00       		.byte	0
+ 684 00d8 00       		.byte	0
+ 685 00d9 10       		.uleb128 0x10
+ 686 00da 34       		.uleb128 0x34
+ 687 00db 00       		.byte	0
+ 688 00dc 03       		.uleb128 0x3
+ 689 00dd 08       		.uleb128 0x8
+ 690 00de 3A       		.uleb128 0x3a
+ 691 00df 0B       		.uleb128 0xb
+ 692 00e0 3B       		.uleb128 0x3b
+ 693 00e1 0B       		.uleb128 0xb
+ 694 00e2 49       		.uleb128 0x49
+ 695 00e3 13       		.uleb128 0x13
+ 696 00e4 3F       		.uleb128 0x3f
+ 697 00e5 19       		.uleb128 0x19
+ 698 00e6 02       		.uleb128 0x2
+ 699 00e7 18       		.uleb128 0x18
+ 700 00e8 00       		.byte	0
+ 701 00e9 00       		.byte	0
+ 702 00ea 11       		.uleb128 0x11
+ 703 00eb 2E       		.uleb128 0x2e
+ 704 00ec 00       		.byte	0
+ 705 00ed 3F       		.uleb128 0x3f
+ 706 00ee 19       		.uleb128 0x19
+ 707 00ef 3C       		.uleb128 0x3c
+ 708 00f0 19       		.uleb128 0x19
+ 709 00f1 6E       		.uleb128 0x6e
+ 710 00f2 0E       		.uleb128 0xe
+ 711 00f3 03       		.uleb128 0x3
+ 712 00f4 0E       		.uleb128 0xe
+ 713 00f5 3A       		.uleb128 0x3a
+ 714 00f6 0B       		.uleb128 0xb
+ 715 00f7 3B       		.uleb128 0x3b
+ 716 00f8 0B       		.uleb128 0xb
+ 717 00f9 00       		.byte	0
+ 718 00fa 00       		.byte	0
+ 719 00fb 00       		.byte	0
+ 720              		.section	.debug_loc,"",%progbits
+ 721              	.Ldebug_loc0:
+ 722              	.LLST0:
+ 723 0000 28000000 		.4byte	.LVL8
+ 724 0004 2F000000 		.4byte	.LVL10-1
+ 725 0008 0500     		.2byte	0x5
+ 726 000a 03       		.byte	0x3
+ 727 000b 00000000 		.4byte	buf
+ 728 000f 00000000 		.4byte	0
+ 729 0013 00000000 		.4byte	0
+ 730              	.LLST1:
+ 731 0017 2A000000 		.4byte	.LVL9
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 15
+
+
+ 732 001b A8000000 		.4byte	.LFE65
+ 733 001f 0100     		.2byte	0x1
+ 734 0021 54       		.byte	0x54
+ 735 0022 00000000 		.4byte	0
+ 736 0026 00000000 		.4byte	0
+ 737              	.LLST2:
+ 738 002a 4A000000 		.4byte	.LVL14
+ 739 002e 4F000000 		.4byte	.LVL15-1
+ 740 0032 0100     		.2byte	0x1
+ 741 0034 50       		.byte	0x50
+ 742 0035 00000000 		.4byte	0
+ 743 0039 00000000 		.4byte	0
+ 744              	.LLST3:
+ 745 003d 46000000 		.4byte	.LVL13
+ 746 0041 49000000 		.4byte	.LVL14-1
+ 747 0045 0100     		.2byte	0x1
+ 748 0047 50       		.byte	0x50
+ 749 0048 66000000 		.4byte	.LVL18
+ 750 004c 6B000000 		.4byte	.LVL19-1
+ 751 0050 0100     		.2byte	0x1
+ 752 0052 50       		.byte	0x50
+ 753 0053 00000000 		.4byte	0
+ 754 0057 00000000 		.4byte	0
+ 755              	.LLST4:
+ 756 005b 76000000 		.4byte	.LVL21
+ 757 005f 7B000000 		.4byte	.LVL22-1
+ 758 0063 0100     		.2byte	0x1
+ 759 0065 50       		.byte	0x50
+ 760 0066 00000000 		.4byte	0
+ 761 006a 00000000 		.4byte	0
+ 762              		.section	.debug_aranges,"",%progbits
+ 763 0000 24000000 		.4byte	0x24
+ 764 0004 0200     		.2byte	0x2
+ 765 0006 00000000 		.4byte	.Ldebug_info0
+ 766 000a 04       		.byte	0x4
+ 767 000b 00       		.byte	0
+ 768 000c 0000     		.2byte	0
+ 769 000e 0000     		.2byte	0
+ 770 0010 00000000 		.4byte	.LFB64
+ 771 0014 28000000 		.4byte	.LFE64-.LFB64
+ 772 0018 00000000 		.4byte	.LFB65
+ 773 001c A8000000 		.4byte	.LFE65-.LFB65
+ 774 0020 00000000 		.4byte	0
+ 775 0024 00000000 		.4byte	0
+ 776              		.section	.debug_ranges,"",%progbits
+ 777              	.Ldebug_ranges0:
+ 778 0000 00000000 		.4byte	.LFB64
+ 779 0004 28000000 		.4byte	.LFE64
+ 780 0008 00000000 		.4byte	.LFB65
+ 781 000c A8000000 		.4byte	.LFE65
+ 782 0010 00000000 		.4byte	0
+ 783 0014 00000000 		.4byte	0
+ 784              		.section	.debug_line,"",%progbits
+ 785              	.Ldebug_line0:
+ 786 0000 CD010000 		.section	.debug_str,"MS",%progbits,1
+ 786      02009101 
+ 786      00000201 
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 16
+
+
+ 786      FB0E0D00 
+ 786      01010101 
+ 787              	.LASF26:
+ 788 0000 55415254 		.ascii	"UART_1_Start\000"
+ 788      5F315F53 
+ 788      74617274 
+ 788      00
+ 789              	.LASF9:
+ 790 000d 5F5F696E 		.ascii	"__int32_t\000"
+ 790      7433325F 
+ 790      7400
+ 791              	.LASF14:
+ 792 0017 646F7562 		.ascii	"double\000"
+ 792      6C6500
+ 793              	.LASF11:
+ 794 001e 75696E74 		.ascii	"uint8\000"
+ 794      3800
+ 795              	.LASF29:
+ 796 0024 53657276 		.ascii	"Servo_PWM_Start\000"
+ 796      6F5F5057 
+ 796      4D5F5374 
+ 796      61727400 
+ 797              	.LASF36:
+ 798 0034 5C5C4669 		.ascii	"\\\\Files\\ktyang\\PSoC Creator\\Workspace02\\Final"
+ 798      6C65735C 
+ 798      6B747961 
+ 798      6E675C50 
+ 798      536F4320 
+ 799 0061 50726F6A 		.ascii	"Project.cydsn\000"
+ 799      6563742E 
+ 799      63796473 
+ 799      6E00
+ 800              	.LASF37:
+ 801 006f 676C6F76 		.ascii	"glove_data\000"
+ 801      655F6461 
+ 801      746100
+ 802              	.LASF33:
+ 803 007a 53657276 		.ascii	"Servo_PWM_WriteCompare\000"
+ 803      6F5F5057 
+ 803      4D5F5772 
+ 803      69746543 
+ 803      6F6D7061 
+ 804              	.LASF13:
+ 805 0091 666C6F61 		.ascii	"float\000"
+ 805      7400
+ 806              	.LASF18:
+ 807 0097 73706565 		.ascii	"speedVal\000"
+ 807      6456616C 
+ 807      00
+ 808              	.LASF30:
+ 809 00a0 52656365 		.ascii	"Receive_Data_Start\000"
+ 809      6976655F 
+ 809      44617461 
+ 809      5F537461 
+ 809      727400
+ 810              	.LASF25:
+ 811 00b3 55415254 		.ascii	"UART_1_GetRxBufferSize\000"
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 17
+
+
+ 811      5F315F47 
+ 811      65745278 
+ 811      42756666 
+ 811      65725369 
+ 812              	.LASF1:
+ 813 00ca 756E7369 		.ascii	"unsigned char\000"
+ 813      676E6564 
+ 813      20636861 
+ 813      7200
+ 814              	.LASF34:
+ 815 00d8 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 815      43313120 
+ 815      352E342E 
+ 815      31203230 
+ 815      31363036 
+ 816 010b 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 816      20726576 
+ 816      6973696F 
+ 816      6E203233 
+ 816      37373135 
+ 817 013e 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 817      66756E63 
+ 817      74696F6E 
+ 817      2D736563 
+ 817      74696F6E 
+ 818              	.LASF19:
+ 819 0166 64697265 		.ascii	"directionVal\000"
+ 819      6374696F 
+ 819      6E56616C 
+ 819      00
+ 820              	.LASF24:
+ 821 0173 55415254 		.ascii	"UART_1_ReadRxData\000"
+ 821      5F315F52 
+ 821      65616452 
+ 821      78446174 
+ 821      6100
+ 822              	.LASF3:
+ 823 0185 73686F72 		.ascii	"short unsigned int\000"
+ 823      7420756E 
+ 823      7369676E 
+ 823      65642069 
+ 823      6E7400
+ 824              	.LASF20:
+ 825 0198 6E657753 		.ascii	"newSpeed\000"
+ 825      70656564 
+ 825      00
+ 826              	.LASF23:
+ 827 01a1 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 827      52784275 
+ 827      66666572 
+ 827      00
+ 828              	.LASF5:
+ 829 01ae 6C6F6E67 		.ascii	"long unsigned int\000"
+ 829      20756E73 
+ 829      69676E65 
+ 829      6420696E 
+ 829      7400
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 18
+
+
+ 830              	.LASF32:
+ 831 01c0 50574D5F 		.ascii	"PWM_WriteCompare\000"
+ 831      57726974 
+ 831      65436F6D 
+ 831      70617265 
+ 831      00
+ 832              	.LASF38:
+ 833 01d1 6D61696E 		.ascii	"main\000"
+ 833      00
+ 834              	.LASF12:
+ 835 01d6 75696E74 		.ascii	"uint16\000"
+ 835      313600
+ 836              	.LASF22:
+ 837 01dd 706F7369 		.ascii	"position\000"
+ 837      74696F6E 
+ 837      00
+ 838              	.LASF8:
+ 839 01e6 756E7369 		.ascii	"unsigned int\000"
+ 839      676E6564 
+ 839      20696E74 
+ 839      00
+ 840              	.LASF7:
+ 841 01f3 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 841      206C6F6E 
+ 841      6720756E 
+ 841      7369676E 
+ 841      65642069 
+ 842              	.LASF31:
+ 843 020a 52656365 		.ascii	"Receive_Data_SetVector\000"
+ 843      6976655F 
+ 843      44617461 
+ 843      5F536574 
+ 843      56656374 
+ 844              	.LASF10:
+ 845 0221 696E7433 		.ascii	"int32_t\000"
+ 845      325F7400 
+ 846              	.LASF17:
+ 847 0229 73697A65 		.ascii	"sizetype\000"
+ 847      74797065 
+ 847      00
+ 848              	.LASF6:
+ 849 0232 6C6F6E67 		.ascii	"long long int\000"
+ 849      206C6F6E 
+ 849      6720696E 
+ 849      7400
+ 850              	.LASF35:
+ 851 0240 6D61696E 		.ascii	"main.c\000"
+ 851      2E6300
+ 852              	.LASF15:
+ 853 0247 63686172 		.ascii	"char\000"
+ 853      00
+ 854              	.LASF2:
+ 855 024c 73686F72 		.ascii	"short int\000"
+ 855      7420696E 
+ 855      7400
+ 856              	.LASF27:
+ 857 0256 50574D5F 		.ascii	"PWM_Start\000"
+ARM GAS  C:\Users\ktyang\AppData\Local\Temp\cckCvfvg.s 			page 19
+
+
+ 857      53746172 
+ 857      7400
+ 858              	.LASF21:
+ 859 0260 6E6F726D 		.ascii	"normalized\000"
+ 859      616C697A 
+ 859      656400
+ 860              	.LASF4:
+ 861 026b 6C6F6E67 		.ascii	"long int\000"
+ 861      20696E74 
+ 861      00
+ 862              	.LASF16:
+ 863 0274 6C6F6E67 		.ascii	"long double\000"
+ 863      20646F75 
+ 863      626C6500 
+ 864              	.LASF0:
+ 865 0280 7369676E 		.ascii	"signed char\000"
+ 865      65642063 
+ 865      68617200 
+ 866              	.LASF28:
+ 867 028c 50574D5F 		.ascii	"PWM_Timer_Start\000"
+ 867      54696D65 
+ 867      725F5374 
+ 867      61727400 
+ 868              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

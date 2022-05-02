@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\TopDesign</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Pins</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Analog</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Clocks</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Interrupts</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\DMA</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\System</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Directives</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Flash Security</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\EEPROM</v>
+<v>Workspace02\FinalProject\Header Files</v>
+<v>Workspace02\FinalProject\Header Files\cyapicallbacks.h</v>
+<v>Workspace02\FinalProject\Source Files</v>
+<v>Workspace02\FinalProject\Source Files\main.c</v>
+<v>Workspace02\FinalProject\Generated_Source</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\TopDesign</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Pins</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Analog</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Clocks</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Interrupts</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\DMA</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\System</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Directives</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\Flash Security</v>
+<v>Workspace02\FinalProject\FinalProject.cydwr\EEPROM</v>
+<v>Workspace02\FinalProject\Header Files</v>
+<v>Workspace02\FinalProject\Header Files\cyapicallbacks.h</v>
+<v>Workspace02\FinalProject\Source Files</v>
+<v>Workspace02\FinalProject\Source Files\main.c</v>
+<v>Workspace02\FinalProject\Generated_Source</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cy_boot</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\Motor_Pin</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\PWM</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\PWM_Timer</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\Receive_Data</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\Servo_Clock</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\Servo_Pin</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\Servo_PWM</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\UART_1</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\UART_1_IntClock</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cycodeshareexport.ld</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cycodeshareimport.ld</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cycodeshareimport.scat</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydevice.h</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydevice_trm.h</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydevicegnu.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydevicegnu_trm.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydeviceiar.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydeviceiar_trm.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydevicerv.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydevicerv_trm.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cydisabledsheets.h</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cyfitter.h</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cyfitter_cfg.c</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cyfitter_cfg.h</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cyfittergnu.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cyfitteriar.inc</v>
+<v>Workspace02\FinalProject\Generated_Source\PSoC5\cyfitterrv.inc</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\TopDesign</v>
+<v>Workspace02\FinalProject\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\TopDesign</v>
+<v>Workspace02\FinalProject\TopDesign\TopDesign.cysch</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\CortexM3</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Motor_Pin.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_Timer.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_Timer_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Receive_Data.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_Clock.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_Pin.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_PWM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_PWM_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\FinalProject.elf</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\FinalProject.hex</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\FinalProject.map</v>
+<v>Workspace02\FinalProject\FinalProject.gpdsc</v>
+<v>Workspace02\FinalProject\FinalProject.rpt</v>
+<v>Workspace02\FinalProject\FinalProject_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\CortexM3</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Motor_Pin.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_Timer.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_Timer_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Receive_Data.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_Clock.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_Pin.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_PWM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\Servo_PWM_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\FinalProject.elf</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\FinalProject.hex</v>
+<v>Workspace02\FinalProject\CortexM3\ARM_GCC_541\Debug\FinalProject.map</v>
+<v>Workspace02\FinalProject\FinalProject.gpdsc</v>
+<v>Workspace02\FinalProject\FinalProject.rpt</v>
+<v>Workspace02\FinalProject\FinalProject_timing.html</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\PSoC 5LP Architecture TRM</v>
+<v>Workspace02\FinalProject\CY8C58LP Family Datasheet</v>
+<v>Workspace02\FinalProject\System Reference Guides</v>
+<v>Workspace02\FinalProject\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace02\FinalProject\cy_clock_v2_20</v>
+<v>Workspace02\FinalProject\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Workspace02\FinalProject\cy_isr_v1_70.pdf</v>
+<v>Workspace02\FinalProject\cy_pins_v2_20</v>
+<v>Workspace02\FinalProject\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace02\FinalProject\PWM_v3_30</v>
+<v>Workspace02\FinalProject\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Workspace02\FinalProject\Timer_v2_80.pdf</v>
+<v>Workspace02\FinalProject\UART_v2_50.pdf</v>
+<v>Workspace02\FinalProject\ZeroTerminal.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds>
+<v>Workspace02</v>
+<v>Workspace02\FinalProject</v>
+<v>Workspace02\FinalProject\PSoC 5LP Architecture TRM</v>
+<v>Workspace02\FinalProject\CY8C58LP Family Datasheet</v>
+<v>Workspace02\FinalProject\System Reference Guides</v>
+<v>Workspace02\FinalProject\System Reference Guides\cy_boot_v5_70</v>
+<v>Workspace02\FinalProject\cy_clock_v2_20</v>
+<v>Workspace02\FinalProject\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>Workspace02\FinalProject\cy_isr_v1_70.pdf</v>
+<v>Workspace02\FinalProject\cy_pins_v2_20</v>
+<v>Workspace02\FinalProject\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>Workspace02\FinalProject\PWM_v3_30</v>
+<v>Workspace02\FinalProject\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>Workspace02\FinalProject\Timer_v2_80.pdf</v>
+<v>Workspace02\FinalProject\UART_v2_50.pdf</v>
+<v>Workspace02\FinalProject\ZeroTerminal.pdf</v>
+</VisibleNodeIds>
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\FinalProject.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\FinalProject.cydsn\main.c" />
+<name v=".\FinalProject.cydsn\FinalProject.cydwr" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1619, 711" SelectedTabbedMdiWindow="8fc066e4-198a-4d21-88e6-fa5ae6c001ad"><DocumentWindow Key="\\Files\ktyang\PSoC Creator\Workspace02\FinalProject.cydsn\TopDesign\TopDesign.cysch" Guid="e6e4333b-8adc-45b9-9424-15cd49ba2647" /><DocumentWindow Key="\\Files\ktyang\PSoC Creator\Workspace02\FinalProject.cydsn\main.c" Guid="8fc066e4-198a-4d21-88e6-fa5ae6c001ad" /><DocumentWindow Key="\\Files\ktyang\PSoC Creator\Workspace02\FinalProject.cydsn\FinalProject.cydwr" Guid="f84335e3-6ec8-46cd-9cc7-1da0da373310" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>
